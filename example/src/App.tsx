@@ -1,14 +1,15 @@
 import * as React from 'react';
 
 import { StyleSheet, View } from 'react-native';
-import AdvanceJalaliDatePicker from 'react-native-advance-jalali-date-picker';
+import AdvanceJalaliDatePicker from '../../../react-native-advance-jalali-date-picker/';
 
 export default function App() {
-
-
   return (
     <View style={styles.container}>
-      <AdvanceJalaliDatePicker allowRangeSelection={true} onDateChange={(date , type) =>  {}} />
+      <AdvanceJalaliDatePicker
+        allowRangeSelection={true}
+        onDateChange={(date, type) => {}}
+      />
     </View>
   );
 }

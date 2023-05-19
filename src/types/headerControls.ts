@@ -1,5 +1,5 @@
 export interface HeaderControlsProps {
-  label: string;
+  label: string | undefined;
   onPress: () => void;
   reverse: boolean;
 }

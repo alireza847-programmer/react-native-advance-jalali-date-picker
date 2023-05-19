@@ -1,3 +1,3 @@
 export interface WeekDaysProps {
-  weekdays: Array<string>;
+  weekdays?: Array<string>;
 }

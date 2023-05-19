@@ -1,7 +1,13 @@
 import React from 'react';
-import {Text, TextStyle, TouchableOpacity, View, ViewStyle} from 'react-native';
-import {DayProps} from './types/day';
-import jMoment from 'jalali-moment';
+import {
+  Text,
+  TextStyle,
+  TouchableOpacity,
+  View,
+  ViewStyle,
+} from 'react-native';
+import { DayProps } from './types/day';
+import jMoment from 'moment-jalaali';
 import style from './style';
 
 const Day = (props: DayProps) => {
@@ -123,9 +129,11 @@ const Day = (props: DayProps) => {
         <TouchableOpacity
           disabled={!enableDateChange}
           style={[daySelectedStyle, propSelectedDayStyle]}
-          onPress={() => onPressDay(day)}>
+          onPress={() => onPressDay(day)}
+        >
           <Text
-            style={[style.dayLabel, customTextStyle, selectedDayColorStyle]}>
+            style={[style.dayLabel, customTextStyle, selectedDayColorStyle]}
+          >
             {day}
           </Text>
         </TouchableOpacity>

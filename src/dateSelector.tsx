@@ -22,6 +22,7 @@ const DateSelector = (props: DateSelectorProps) => {
       return allYears.map((item) => {
         return (
           <TouchableOpacity
+            key={item}
             onPress={() => onYearPress(item)}
             style={[
               style.yearItem,
@@ -62,6 +63,7 @@ const DateSelector = (props: DateSelectorProps) => {
       return utils.MONTHS.map((item, index) => {
         return (
           <TouchableOpacity
+            key={item}
             onPress={() => onMonthPress(index)}
             style={[
               style.yearItem,

@@ -3,6 +3,6 @@ export interface HeaderProps {
   currentYear: number;
   onPressNext: () => void;
   onPressPrevious: () => void;
-  months: Array<string>;
+  months?: Array<string>;
   onDatePress: () => void;
 }

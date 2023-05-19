@@ -1,12 +1,12 @@
-import {Moment, MomentInput} from 'moment-jalaali';
+import { Moment, MomentInput } from 'moment-jalaali';
 
 export interface DayProps {
   day: number;
   month: number;
   year: number;
   onPressDay: (day: number) => void;
-  selectedStartDate: Moment;
-  selectedEndDate: Moment;
+  selectedStartDate: Moment | null;
+  selectedEndDate: Moment | null;
   allowRangeSelection: boolean;
   minDate: MomentInput;
   maxDate: MomentInput;

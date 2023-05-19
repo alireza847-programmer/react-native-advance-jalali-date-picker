@@ -1,8 +1,8 @@
 import React from 'react';
-import {View, Text, Pressable, Image} from 'react-native';
+import { View, Text, Pressable, Image } from 'react-native';
 import style from './style';
-import {HeaderProps} from './types/header';
-import {utils} from './utils';
+import { HeaderProps } from './types/header';
+import { utils } from './utils';
 import HeaderControl from './controls';
 
 const Header = (props: HeaderProps) => {
@@ -38,7 +38,7 @@ const Header = (props: HeaderProps) => {
       <Pressable style={style.currentDateButton} onPress={onDatePress}>
         <Image
           style={style.chevronDown}
-          source={require('../assets/svgs/chevron.png')}
+          source={require('./assets/svgs/chevron.png')}
         />
         <Text style={style.monthLabel}>{year} </Text>
         <Text style={style.monthLabel}>{month}</Text>

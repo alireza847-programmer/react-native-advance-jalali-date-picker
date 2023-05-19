@@ -1,15 +1,18 @@
 import React from 'react';
-import {Text, View} from 'react-native';
-import {utils} from './utils';
-import {WeekDaysProps} from './types/weekDays';
+import { Text, View } from 'react-native';
+import { utils } from './utils';
+import { WeekDaysProps } from './types/weekDays';
 import style from './style';
 
 const WeekDays = (props: WeekDaysProps) => {
-  const {weekdays} = props;
-  let wd = weekdays;
-  if (!wd) {
+  const { weekdays } = props;
+  let wd: string[] = [];
+  if (weekdays) {
+    wd = weekdays;
+  } else {
     wd = utils.WEEKDAYS;
   }
+
   const renderWeekDays = () => {
     return wd.map((day, key) => {
       return (

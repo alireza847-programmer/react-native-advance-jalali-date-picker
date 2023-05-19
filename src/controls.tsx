@@ -1,10 +1,10 @@
 import React from 'react';
-import {Image, Pressable, Text} from 'react-native';
-import {HeaderControlsProps} from './types/headerControls';
+import { Image, Pressable, Text } from 'react-native';
+import { HeaderControlsProps } from './types/headerControls';
 import style from './style';
 
 const HeaderControl = (props: HeaderControlsProps) => {
-  const {label, onPress, reverse} = props;
+  const { label, onPress, reverse } = props;
   return (
     <Pressable
       style={[
@@ -13,15 +13,16 @@ const HeaderControl = (props: HeaderControlsProps) => {
           flexDirection: reverse ? 'row-reverse' : 'row',
         },
       ]}
-      onPress={onPress}>
+      onPress={onPress}
+    >
       <Image
         style={[
           style.chevronLeft,
           reverse && {
-            transform: [{rotate: '-90deg'}],
+            transform: [{ rotate: '-90deg' }],
           },
         ]}
-        source={require('../assets/svgs/chevron.png')}
+        source={require('./assets/svgs/chevron.png')}
       />
       <Text style={style.labelControl}>{label}</Text>
     </Pressable>
