@@ -11,11 +11,10 @@ npm install react-native-advance-jalali-date-picker
 ## Usage
 
 ```js
-import { multiply } from 'react-native-advance-jalali-date-picker';
+import DatePicker from 'react-native-advance-jalali-date-picker';
 
 // ...
-
-const result = await multiply(3, 7);
+<AdvanceJalaliDatePicker allowRangeSelection={true} onDateChange={(date , type) =>  console.log(date , type)} />
 ```
 
 ## Contributing
