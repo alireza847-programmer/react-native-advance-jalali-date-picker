@@ -3,7 +3,6 @@ import { ScrollView, Text, TouchableOpacity, View } from 'react-native';
 import { DateSelectorProps } from './types/dateSelector';
 import style, { fonts } from './style';
 import jMoment from 'moment-jalaali';
-import LinearGradient from 'react-native-linear-gradient';
 import { utils } from './utils';
 
 const DateSelector = (props: DateSelectorProps) => {
@@ -110,10 +109,6 @@ const DateSelector = (props: DateSelectorProps) => {
 
       <View style={style.listContainer}>
         {renderYearSelector()}
-        <LinearGradient
-          style={style.yearGradint}
-          colors={['#F7F8FA00', '#F7F8FAF3', '#F7F8FA']}
-        />
         <View style={style.selectorDevider} />
         {renderMonthSelector()}
       </View>

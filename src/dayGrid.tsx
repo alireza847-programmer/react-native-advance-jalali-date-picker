@@ -6,6 +6,7 @@ import jMoment from 'moment-jalaali';
 import style from './style';
 import Day from './day';
 import EmptyDay from './emptyDay';
+import { v4 as uuidv4 } from 'uuid';
 
 const DayGrid = (props: DayGridProps) => {
   const {
@@ -30,7 +31,6 @@ const DayGrid = (props: DayGridProps) => {
   );
   const guideArray = [0, 1, 2, 3, 4, 5, 6];
   const startIndex = firstWeekDay;
-
   function renderColumns(i: number) {
     const column = guideArray.map((index) => {
       if (i === 0) {
@@ -56,9 +56,8 @@ const DayGrid = (props: DayGridProps) => {
               />
             );
           }
-          return <Fragment />;
         } else {
-          return <EmptyDay />;
+          return <EmptyDay key={uuidv4()} />;
         }
       } else {
         if (days.length > 0) {
@@ -81,7 +80,7 @@ const DayGrid = (props: DayGridProps) => {
             />
           );
         }
-        return <Fragment />;
+        return <Fragment key={uuidv4()} />;
       }
     });
     return column;
