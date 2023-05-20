@@ -56,6 +56,7 @@ const DayGrid = (props: DayGridProps) => {
               />
             );
           }
+          return <Fragment key={uuidv4()} />;
         } else {
           return <EmptyDay key={uuidv4()} />;
         }
