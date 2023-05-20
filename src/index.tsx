@@ -8,7 +8,6 @@ import Header from './header';
 import WeekDays from './weekdays';
 import DayGrid from './dayGrid';
 import DateSelector from './dateSelector';
-import 'react-native-get-random-values';
 
 const AdvanceJalaliDatePicker = (props: DatePickerProps) => {
   const {

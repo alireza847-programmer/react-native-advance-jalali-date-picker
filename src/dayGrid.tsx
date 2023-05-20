@@ -6,7 +6,7 @@ import jMoment from 'moment-jalaali';
 import style from './style';
 import Day from './day';
 import EmptyDay from './emptyDay';
-import { v4 as uuidv4 } from 'uuid';
+import uuid from 'react-native-uuid';
 
 const DayGrid = (props: DayGridProps) => {
   const {
@@ -56,9 +56,9 @@ const DayGrid = (props: DayGridProps) => {
               />
             );
           }
-          return <Fragment key={uuidv4()} />;
+          return <Fragment key={uuid.v4().toString()} />;
         } else {
-          return <EmptyDay key={uuidv4()} />;
+          return <EmptyDay key={uuid.v4().toString()} />;
         }
       } else {
         if (days.length > 0) {
@@ -81,7 +81,7 @@ const DayGrid = (props: DayGridProps) => {
             />
           );
         }
-        return <Fragment key={uuidv4()} />;
+        return <Fragment key={uuid.v4().toString()} />;
       }
     });
     return column;
