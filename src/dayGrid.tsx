@@ -1,12 +1,10 @@
-import React, { Fragment } from 'react';
+import React from 'react';
 import { View } from 'react-native';
 import { DayGridProps } from './types/dayGrid';
 import { utils } from './utils';
 import jMoment from 'moment-jalaali';
 import style from './style';
 import Day from './day';
-import EmptyDay from './emptyDay';
-import uuid from 'react-native-uuid';
 
 const DayGrid = (props: DayGridProps) => {
   const {
@@ -56,9 +54,9 @@ const DayGrid = (props: DayGridProps) => {
               />
             );
           }
-          return <Fragment key={uuid.v4().toString()} />;
+          return null;
         } else {
-          return <EmptyDay key={uuid.v4().toString()} />;
+          return null;
         }
       } else {
         if (days.length > 0) {
@@ -81,7 +79,7 @@ const DayGrid = (props: DayGridProps) => {
             />
           );
         }
-        return <Fragment key={uuid.v4().toString()} />;
+        return null;
       }
     });
     return column;

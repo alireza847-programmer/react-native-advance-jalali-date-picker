@@ -1,7 +1,7 @@
 {
   "name": "react-native-advance-jalali-date-picker",
-  "version": "0.1.3",
-  "description": "test",
+  "version": "0.1.6",
+  "description": "react native jalali Date Picker",
   "main": "lib/commonjs/index",
   "module": "lib/module/index",
   "types": "lib/typescript/index.d.ts",
@@ -21,6 +21,7 @@
     "!android/gradlew",
     "!android/gradlew.bat",
     "!android/local.properties",
+    "!example",
     "!**/__tests__",
     "!**/__fixtures__",
     "!**/__mocks__",
@@ -158,7 +159,6 @@
     ]
   },
   "dependencies": {
-    "moment-jalaali": "^0.10.0",
-    "react-native-uuid": "^2.0.1"
+    "moment-jalaali": "^0.10.0"
   }
 }
